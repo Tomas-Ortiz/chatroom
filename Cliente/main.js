@@ -1,5 +1,5 @@
 //se especifica la url de nuestro socket (nuestra ip) para la conexion
-var socket = io.connect('http://192.168.0.2:6677', {'forceNew': true});
+var socket = io.connect('http://tu_ipv4:6677', {'forceNew': true});
 
 //el cliente recibe el mensaje enviado por el socket
 //data son los mensajes que llegan del servidor
