@@ -1,0 +1,63 @@
+
+#mensajes{
+height: 400px;
+overflow-y: scroll;
+ margin-top: 15%;
+border: 1px solid #eee;
+box-shadow: 0px 0px 20px #ccc inset;
+}
+
+.mensaje{
+margin: 30px;
+padding: 5px;
+border-radius: 5px;
+border: 1px solid #ccc;
+background: white;
+font-style: italic;
+word-wrap: break-word;
+}
+
+.textoCentrado{
+text-align: center;
+}
+
+body{
+background: #F8F8F8;
+font-family: "Times New Roman";
+}
+
+#nombre, #texto{
+position: relative;
+}
+
+#nombre{
+border-radius: 6px;
+bottom:30px;
+right: 6px;
+}
+
+#texto{
+border-radius: 10px;
+margin-top: 3%
+}
+
+#nombre,#texto{
+outline: none;
+}
+            
+#sala{
+background-color: #7FA7CF;
+border-radius: 5px;
+font-size: 20px;
+text-align: left;
+font-weight: bold;
+margin-top: 10%;
+margin-bottom: -15%;
+
+}
+
+#titulo{
+background-color: #7FA7CF;
+padding: 2%;
+border-radius: 5px;
+}

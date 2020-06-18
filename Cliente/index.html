@@ -1,0 +1,69 @@
+<html>
+    <head>
+
+        <title>Chatroom</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Se carga la biblioteca de socket.io del lado del cliente -->
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+        <!-- Se importa el script para utilizar sus funciones -->
+        <script src="main.js"></script>
+
+        <!-- se importa bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Se importa el css -->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        
+            <script>
+
+            function verificarTecla(e){
+
+                let nombre = document.getElementById('nombre').value;
+                let msj = document.getElementById('texto').value;
+
+                //si se presiona enter y el nombre y texto no están vacios
+
+                if(e.keyCode == 13 && nombre != "" && msj!="" && msj.trim() != ""){
+
+                    document.getElementById("formEnvioMsj").onsubmit();
+
+                    return false;
+                    
+                } else if (e.keyCode != 13){
+                    return true;
+                }
+
+                return false;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="mx-auto" style="width: 400px">
+
+            <h1 class="textoCentrado" id="titulo">Chatrooms públicos</h1>
+
+            <h2 id="sala">Sala #1</h2>
+
+            <div id="mensajes"></div>
+
+            <form class="textoCentrado" id="formEnvioMsj" onsubmit="return agregarMensaje(this);">
+
+                <input id="nombre" type="text" placeholder="Nombre..." required>
+
+                <textarea id="texto" placeholder="Mensaje..." onkeypress="return verificarTecla(event);" required></textarea>
+                
+            </form>
+
+        </div>
+        
+    </body>
+
+</html>
